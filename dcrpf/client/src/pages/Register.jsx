@@ -21,25 +21,25 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: { 
-      main: "#8b5cf6",  // Bright purple (Violet-500)
-      light: "#a78bfa", // Violet-400
-      dark: "#7c3aed"   // Violet-600
+      main: "#8b5cf6",  
+      light: "#a78bfa", 
+      dark: "#7c3aed"   
     },
     secondary: { 
-      main: "#10b981",  // Emerald-500
-      light: "#34d399", // Emerald-400
-      dark: "#059669"   // Emerald-600
+      main: "#10b981",  
+      light: "#34d399", 
+      dark: "#059669"   
     },
     background: { 
-      default: "#1f2937", // Dark grey-800
-      paper: "#1e293b"    // Darker grey-800
+      default: "#1f2937", 
+      paper: "#1e293b"    
     },
     text: { 
-      primary: "#f9fafb", // Light grey-50
-      secondary: "#9ca3af" // Grey-400
+      primary: "#f9fafb", 
+      secondary: "#9ca3af" 
     },
     error: {
-      main: "#ef4444" // Red-500
+      main: "#ef4444" 
     }
   },
   typography: {
@@ -62,24 +62,24 @@ const theme = createTheme({
             borderRadius: '0.375rem',
             transition: 'all 0.2s ease-in-out',
             '& fieldset': {
-              borderColor: '#4b5563', // Grey-600
+              borderColor: '#4b5563', 
               transition: 'border-color 0.2s ease-in-out'
             },
             '&:hover fieldset': {
-              borderColor: '#6b7280', // Grey-500
+              borderColor: '#6b7280', 
             },
             '&.Mui-focused fieldset': {
-              borderColor: '#8b5cf6', // Violet-500
+              borderColor: '#8b5cf6', 
               borderWidth: '2px',
               boxShadow: '0 0 0 3px rgba(139, 92, 246, 0.3)'
             },
           },
           '& .MuiInputLabel-root': {
-            color: '#9ca3af', // Grey-400
+            color: '#9ca3af', 
             transition: 'all 0.2s ease-in-out'
           },
           '& .MuiInputLabel-root.Mui-focused': {
-            color: '#8b5cf6' // Violet-500
+            color: '#8b5cf6' 
           }
         },
       },
@@ -106,7 +106,7 @@ const theme = createTheme({
           borderRadius: '0.75rem',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3)',
-          border: '2px solid #8b5cf6', // Bright purple border
+          border: '2px solid #8b5cf6', 
           backgroundColor: '#1e293b',
           '&:hover': {
             transform: 'translateY(-2px)',
@@ -430,8 +430,20 @@ const Register = () => {
                         </Typography>
                       </Fade>
                     )}
+                                  <Box sx={{ textAlign: "center", mt: 3 }}>
+                <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                  Already have an account?{" "}
+                  <a 
+                    href="/login" 
+                    style={{ color: "#8b5cf6", textDecoration: "none", fontWeight: 600 }}
+                  >
+                    Login
+                  </a>
+                </Typography>
+              </Box>
                   </Box>
                 </Fade>
+                
               )}
             </Card>
           </Grow>

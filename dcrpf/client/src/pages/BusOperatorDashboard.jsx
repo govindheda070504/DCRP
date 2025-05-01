@@ -247,7 +247,7 @@ const BusOperatorDashboard = ({ user, setUser }) => {
         departureTime: busStartTime ? new Date(busStartTime) : new Date(),
         trafficModel: "bestguess"
       },
-      optimizeWaypoints: false // Keep our ordered stops
+      optimizeWaypoints: false 
     }, (result, status) => {
       if (status === "OK") {
         setDirections({ [selectedBus]: result });
