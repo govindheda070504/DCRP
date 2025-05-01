@@ -1,0 +1,63 @@
+
+/* Animation classes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button pulse animation */
+@keyframes pulse {
+  0% {
+    transform: translateY(-1px);
+    boxShadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-2px);
+    boxShadow: 0 20px 25px -5px rgba(139, 92, 246, 0.4);
+  }
+  100% {
+    transform: translateY(-1px);
+    boxShadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.pulse:hover {
+  animation: pulse 1.5s ease infinite;
+}
+
+/* Input focus effect */
+.input-focus-effect .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.35);
+}
+
+/* Error shake animation */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
