@@ -106,7 +106,7 @@ const theme = createTheme({
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3)',
           border: '2px solid #8b5cf6', 
-          backgroundColor: '#374151', 
+          backgroundColor: "rgba(0, 0, 0, 0.5)", 
           '&:hover': {
             transform: 'translateY(-2px)',
             boxShadow: '0 20px 25px -5px rgba(139, 92, 246, 0.3)',
@@ -158,7 +158,11 @@ const Login = ({ setUser }) => {
           alignItems: "center", 
           minHeight: "100vh", 
           backgroundColor: "background.default",
-          padding: "1.5rem"
+          padding: "1.5rem",
+          backgroundImage: "url('/images/bg.jpg')",  
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative"
         }}
       >
         <Grow in={true} timeout={600}>
@@ -168,6 +172,8 @@ const Login = ({ setUser }) => {
               p: 4, 
               width: "100%", 
               maxWidth: "400px",
+              position: "relative",
+              zIndex: 1,
             }}
           >
             <Box 
