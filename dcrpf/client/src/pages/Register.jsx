@@ -16,7 +16,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./Register.css";
 
 const libraries = ["places"];
-
+const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 const theme = createTheme({
   palette: {
     mode: 'dark',
@@ -189,7 +189,7 @@ const Register = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <LoadScript googleMapsApiKey="AIzaSyBcqOTU_Pw53PdtM4MKn_O9HovVRPrKWOU" libraries={libraries}>
+      <LoadScript googleMapsApiKey={apiKey} libraries={libraries}>
         <Box 
           sx={{ 
             display: "flex", 
